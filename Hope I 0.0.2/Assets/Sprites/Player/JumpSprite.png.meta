@@ -1,0 +1,376 @@
+fileFormatVersion: 2
+guid: c1faca75e7ee323439afdb2abdfccdd1
+timeCreated: 1510781276
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jump_0
+    21300002: Jump_1
+    21300004: Jump_2
+    21300006: Jump_3
+    21300008: Jump_4
+    21300010: Jump_5
+    21300012: Jump_6
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 384
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jump_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.09037399, y: 42.613113}
+        - {x: -15.082717, y: 43.17138}
+        - {x: -18.746605, y: 34.25103}
+        - {x: -21.085941, y: 28.5316}
+        - {x: -21.304321, y: 22.220161}
+        - {x: -19.334745, y: 17.141342}
+        - {x: -13.690948, y: 12.322678}
+        - {x: -19.07874, y: 7.8194046}
+        - {x: -19.381924, y: -0.9831009}
+        - {x: -19.485058, y: -13.148895}
+        - {x: -16.990057, y: -19.781582}
+        - {x: -23.97866, y: -34.06412}
+        - {x: -24, y: -43.5}
+        - {x: -4.83284, y: -43.5}
+        - {x: 9.936508, y: -43.45954}
+        - {x: 10.715248, y: -42.398693}
+        - {x: 10.54948, y: -38.33842}
+        - {x: 4.419651, y: -33.299797}
+        - {x: 4.9580307, y: -25.050528}
+        - {x: 3.5678596, y: -22.45996}
+        - {x: 4.2002335, y: -18.158833}
+        - {x: -0.28518295, y: -13.701508}
+        - {x: 0.15101051, y: -10.147327}
+        - {x: 0.30661774, y: -4.2207336}
+        - {x: 2.1749363, y: -3.7959404}
+        - {x: 9.413498, y: -7.0170403}
+        - {x: 12.343769, y: -5.307808}
+        - {x: 24, y: 5.0623894}
+        - {x: 24, y: 10.935425}
+        - {x: 18.727348, y: 16.971008}
+        - {x: 15.0893135, y: 17.649086}
+        - {x: 17.072556, y: 27.504837}
+        - {x: 12.850559, y: 38.187836}
+        - {x: 6.4432983, y: 40.47283}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 4
+        width: 42
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.032707, y: 44.531525}
+        - {x: 10.7821045, y: 47.265884}
+        - {x: -15.932068, y: 48.246597}
+        - {x: -17.722633, y: 36.37384}
+        - {x: -19.467865, y: 31.310997}
+        - {x: -19.359375, y: 27.943352}
+        - {x: -15.381012, y: 24.150185}
+        - {x: -14.626228, y: 19.165802}
+        - {x: -10.736984, y: 17.939095}
+        - {x: -14.275497, y: 14.6634445}
+        - {x: -15.108696, y: -6.592781}
+        - {x: -7.6703186, y: -12.247795}
+        - {x: -20.121086, y: -21.184116}
+        - {x: -20.127396, y: -27.73524}
+        - {x: -13.369873, y: -40.608612}
+        - {x: -10.357353, y: -40.77141}
+        - {x: -5.1776733, y: -48.5}
+        - {x: 0.4116974, y: -48.246605}
+        - {x: 2.5020676, y: -42.708504}
+        - {x: 1.4634857, y: -36.422802}
+        - {x: 5.0575867, y: -29.616692}
+        - {x: 3.9989166, y: -27.024994}
+        - {x: 4.5685425, y: 5.5282516}
+        - {x: 18.60109, y: 11.431034}
+        - {x: 20.747177, y: 24.761848}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 4
+        width: 41
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 49.5}
+        - {x: -19.930008, y: 27.056854}
+        - {x: -13.866531, y: 19.286682}
+        - {x: -11.856094, y: 3.9909973}
+        - {x: -10.795593, y: -6.0458946}
+        - {x: -6.2085724, y: -10.171444}
+        - {x: -18.599533, y: -32.282635}
+        - {x: -15.290985, y: -43.132065}
+        - {x: -10.1515045, y: -48.86651}
+        - {x: -5.4548187, y: -48.993206}
+        - {x: -3.0431213, y: -44.0567}
+        - {x: -3.6353912, y: -37.29164}
+        - {x: -0.645813, y: -29.925495}
+        - {x: 7.802353, y: -30.212782}
+        - {x: 8.052292, y: -22.49843}
+        - {x: 6.1963043, y: -18.241882}
+        - {x: 8.942001, y: -15.371517}
+        - {x: 9.685059, y: -6.951557}
+        - {x: 10.617538, y: -1.9208488}
+        - {x: 8.131378, y: 0.40865707}
+        - {x: 7.137146, y: 9.441795}
+        - {x: 10.391006, y: 15.650688}
+        - {x: 15.889511, y: 22.574936}
+        - {x: 19.234192, y: 31.581741}
+        - {x: 20.5, y: 36.99855}
+        - {x: 20.5, y: 49.5}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 4
+        width: 53
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.9341278, y: 47.85972}
+        - {x: -18.22142, y: 47.493042}
+        - {x: -25.739822, y: 44.18547}
+        - {x: -26.5, y: 29.06321}
+        - {x: -21.219116, y: 26.057213}
+        - {x: -17.175766, y: 17.20182}
+        - {x: -17.000732, y: 9.301174}
+        - {x: -14.326935, y: 4.179043}
+        - {x: -14.126343, y: -7.53928}
+        - {x: -7.9175262, y: -12.750374}
+        - {x: -21.432068, y: -24.018015}
+        - {x: -21.858215, y: -27.072266}
+        - {x: -4.6582947, y: -49}
+        - {x: 4.5, y: -49}
+        - {x: 8.038391, y: -16.805374}
+        - {x: 5.4608154, y: -13.035839}
+        - {x: 5.424164, y: -8.951214}
+        - {x: 4.220093, y: 9.521053}
+        - {x: 26.5, y: 30.855286}
+        - {x: 25.807129, y: 42.276413}
+        - {x: 10.662735, y: 45.84613}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 4
+        width: 71
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.966034, y: 48}
+        - {x: -16.943207, y: 26.776741}
+        - {x: -14.351379, y: 21.521416}
+        - {x: -30.4496, y: 20.84742}
+        - {x: -35.119904, y: 17.972824}
+        - {x: -34.233017, y: 7}
+        - {x: -30.006805, y: -1}
+        - {x: -19.5, y: 3}
+        - {x: -14.5, y: 6}
+        - {x: -14.5, y: 8}
+        - {x: -15.5, y: 0}
+        - {x: -16.5, y: -12}
+        - {x: -24.5, y: -30}
+        - {x: -25.5, y: -44}
+        - {x: -13.5, y: -48}
+        - {x: 0.21026611, y: -47.619904}
+        - {x: 0.5591736, y: -41.195797}
+        - {x: -1.7515564, y: -35.46454}
+        - {x: 1.0580444, y: -28.462431}
+        - {x: 11.427368, y: -31.642647}
+        - {x: 10.570557, y: -19.769974}
+        - {x: 19.613098, y: -8.93137}
+        - {x: 16.71524, y: 1.2453995}
+        - {x: 9.170074, y: 5.738121}
+        - {x: 32.45923, y: 5.509365}
+        - {x: 35.5, y: 9.164925}
+        - {x: 35.5, y: 20.3517}
+        - {x: 19.497375, y: 21.19217}
+        - {x: 20.137817, y: 39.8171}
+        - {x: 15.735107, y: 45.90963}
+        - {x: 12.1423645, y: 48}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_5
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 4
+        width: 65
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.228729, y: -38.20635}
+        - {x: 17.426819, y: -34.211647}
+        - {x: 14.672272, y: -23.027246}
+        - {x: 18.042725, y: -7.6926575}
+        - {x: 31.221588, y: -10.863037}
+        - {x: 32.5, y: 4.3850784}
+        - {x: 11.916382, y: 13.330681}
+        - {x: 16.294678, y: 18.862984}
+        - {x: 18.529175, y: 35.714813}
+        - {x: 11.803009, y: 47}
+        - {x: -15.825745, y: 46.619904}
+        - {x: -17.237457, y: 33.8733}
+        - {x: -19.757812, y: 30.280571}
+        - {x: -19.597198, y: 25.757957}
+        - {x: -12.276794, y: 15.555565}
+        - {x: -26.993195, y: 5.298584}
+        - {x: -31.866516, y: 2}
+        - {x: -31.613129, y: -9.298584}
+        - {x: -28.896698, y: -12.0896225}
+        - {x: -25.228577, y: -11.918488}
+        - {x: -19.201416, y: -10.959244}
+        - {x: -16.780579, y: -7.986412}
+        - {x: -16.766968, y: -0.9049034}
+        - {x: -12.880096, y: 3.443592}
+        - {x: -10.233002, y: -18.167458}
+        - {x: -14.432068, y: -26.05434}
+        - {x: -19.30539, y: -36.927643}
+        - {x: -21.052002, y: -43.15387}
+        - {x: -16.038391, y: -46.36651}
+        - {x: 0.9396057, y: -47}
+        - {x: 0.8441162, y: -42.640114}
+        - {x: -3.4124146, y: -37.40657}
+        - {x: -1.9799194, y: -28.121973}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jump_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 4
+        width: 48
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.6784973, y: 41.848816}
+        - {x: -12.692261, y: 42.3733}
+        - {x: -16.447113, y: 34.67417}
+        - {x: -19.185455, y: 27.699059}
+        - {x: -17.533844, y: 9.553505}
+        - {x: -24, y: 10.042053}
+        - {x: -24, y: -42.5}
+        - {x: 18, y: -42.5}
+        - {x: 15.004425, y: -36.04312}
+        - {x: 9.342712, y: -31.604933}
+        - {x: 9.210602, y: -19.313358}
+        - {x: 2.0474854, y: -10.590546}
+        - {x: 9.233032, y: -13.186314}
+        - {x: 24, y: -12.442986}
+        - {x: 24, y: 1.6331825}
+        - {x: 7.1491394, y: 0.908432}
+        - {x: 14.624329, y: 8.789425}
+        - {x: 18.091125, y: 20.789711}
+        - {x: 16.873291, y: 34.644714}
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
