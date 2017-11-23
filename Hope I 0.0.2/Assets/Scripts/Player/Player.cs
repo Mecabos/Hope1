@@ -13,15 +13,19 @@ public class Player : MonoBehaviour
     public float playerGravity = -20f;
     public float accelerationTimeAirborne = 0.2f;
     public float accelerationTimeGrounded = 0.1f;
-    [System.NonSerialized]
-    public MovementInfo movementInfo = new MovementInfo();
-    [System.NonSerialized]
-    public PlayerInfo playerInfo = new PlayerInfo();
     [Space]
     [Header("Other variables")]
     public float fireRate = 0.2f;
     public GameObject shot;
     public Transform shotSpawnTransform;
+
+    [System.NonSerialized]
+    public MovementInfo movementInfo = new MovementInfo();
+    [System.NonSerialized]
+    public PlayerInfo playerInfo = new PlayerInfo();
+    [System.NonSerialized]
+    public SoundController soundController;
+
 
     //**** Private variables
     private Rigidbody2D playerRB;
@@ -40,6 +44,7 @@ public class Player : MonoBehaviour
         playerRB = gameObject.GetComponent<Rigidbody2D>();
         playerAnim = gameObject.GetComponent<Animator>();
         playerTransform = gameObject.GetComponent<Transform>();
+        soundController = new SoundController();
         originalScale = playerTransform.localScale;
         movementInfo.isRuning = false;
         movementInfo.isGrounded = true;
@@ -67,6 +72,13 @@ public class Player : MonoBehaviour
    //This methode handles capturing user input
     private void handleInput()
     {
+        //blocks input while being hit
+        if (playerInfo.isHurting)
+        {
+            finishedLanding();
+            return;
+        }
+
         // Input for walking
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         PlayerAction.walk(this,input);
@@ -78,17 +90,20 @@ public class Player : MonoBehaviour
         }
 
         // Input for firing
-        if (Input.GetButton("Fire1") && Time.time > playerInfo.nextFire)
+        if (!playerAnim.GetCurrentAnimatorStateInfo(0).IsName("LandingShoot"))
         {
-            //Debug.Log("At input: Time = " + Time.time + "playerInfo.nextFire" + playerInfo.nextFire);
-            playerInfo.nextFire = Time.time + fireRate;
-            movementInfo.isShooting = true;
-            PlayerAction.shoot(this);
+            if (Input.GetButton("Fire1")) movementInfo.isShooting = true;
+            else movementInfo.isShooting = false;
+
+            if (Input.GetButton("Fire1") && Time.time > playerInfo.nextFire)
+            {
+                //Debug.Log("At input: Time = " + Time.time + "playerInfo.nextFire" + playerInfo.nextFire);
+                playerInfo.nextFire = Time.time + fireRate;
+                PlayerAction.shoot(this);
+            }
         }
-        else
-        {
-            movementInfo.isShooting = false;
-        }
+        
+        
 
 
     }
@@ -113,7 +128,7 @@ public class Player : MonoBehaviour
 
     
     //this class contains all player actions
-    public class PlayerAction
+    public static class PlayerAction
     {
 
         public static void walk(Player player, Vector2 input)
@@ -155,21 +170,35 @@ public class Player : MonoBehaviour
 
         public static void shoot(Player player)
         {
+
             Animator playerAnim = player.GetComponent<Animator>();
-            if (!player.movementInfo.isRuning && player.movementInfo.isGrounded && player.movementInfo.isShooting)
+            if (!player.movementInfo.isRuning && player.movementInfo.isGrounded )
             {
                 playerAnim.SetTrigger(player.parameterShootStillOnLandHash);
+                playerAnim.ResetTrigger(player.parameterJumpShootHash);
+                player.shootBolt();
             }
-            else if(player.movementInfo.isRuning && player.movementInfo.isGrounded  && player.movementInfo.isShooting )
+            else if(player.movementInfo.isRuning && player.movementInfo.isGrounded  )
             {
                 playerAnim.SetTrigger(player.parameterShootRunOnLandHash);
                 playerAnim.ResetTrigger(player.parameterShootStillOnLandHash);
-            }else if (!player.movementInfo.isGrounded && player.movementInfo.isShooting)
-            {
-                playerAnim.SetTrigger(player.parameterJumpShootHash);
-                //no event in the animation he can shoot while landing or going up so we just fire it up here
+                playerAnim.ResetTrigger(player.parameterJumpShootHash);
                 player.shootBolt();
             }
+            else if (!player.movementInfo.isGrounded)
+            {
+                playerAnim.SetTrigger(player.parameterJumpShootHash);
+                player.shootBolt();
+            }
+        }
+
+        public static void hurt (Player player)
+        {
+            Animator playerAnim = player.GetComponent<Animator>();
+            Rigidbody2D playerRB = player.GetComponent<Rigidbody2D>();
+            playerAnim.SetTrigger(player.parameterHurtHash);
+            player.playerInfo.isHurting = true;
+            playerRB.AddForce(new Vector2(1 * (-8 * player.movementInfo.directionX),5)  , ForceMode2D.Impulse);
         }
         
     }
@@ -192,6 +221,8 @@ public class Player : MonoBehaviour
     public class PlayerInfo
     {
         public float nextFire = 0.0f;
+        public bool isHurting = false;
+        
 
     }
 
@@ -209,9 +240,15 @@ public class Player : MonoBehaviour
         if (Time.time < playerInfo.nextFire)
         {
             GameObject newShot = Instantiate(shot, shotSpawnTransform.position, shotSpawnTransform.rotation);
+            playerAnim.SetTrigger(parameterBangHash);
             newShot.transform.parent = shotSpawnTransform;
         }
         
+    }
+
+    public void endPain()
+    {
+        playerInfo.isHurting = false;
     }
 
 
@@ -226,6 +263,8 @@ public class Player : MonoBehaviour
     int parameterJumpShootHash = Animator.StringToHash("jumpShoot");
     int parameterShootStillOnLandHash = Animator.StringToHash("shootStillOnLand");
     int parameterShootRunOnLandHash = Animator.StringToHash("shootRunOnLand");
+    int parameterBangHash = Animator.StringToHash("bang");
+    int parameterHurtHash = Animator.StringToHash("hurt");
     //bool parameters
     int parameterIsLandingHash = Animator.StringToHash("isLanding");
     int parameterIsGroundedHash = Animator.StringToHash("isGrounded");

@@ -6,6 +6,7 @@ public class DamageByContact : MonoBehaviour {
 
     //**** Private variables
     private string playerBoltTag = "PlayerBolt";
+    private string playerTag = "Player";
     private Robot01 robot01; 
     void Start()
     {
@@ -14,11 +15,16 @@ public class DamageByContact : MonoBehaviour {
 
     private void OnTriggerEnter2D (Collider2D other)
     {
-        
+
         if (other.tag == playerBoltTag)
         {
             BoltProperties boltProperties =  other.gameObject.GetComponent<BoltProperties>();
             Damage(boltProperties.baseDamage);
+        }
+        else if (other.tag == playerTag)
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            Player.PlayerAction.hurt(player);
         }
     }
     

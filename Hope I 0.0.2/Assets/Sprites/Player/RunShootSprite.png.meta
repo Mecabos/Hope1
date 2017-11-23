@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5db0b3f1c0fc24c4d95edf1900ccb6b8
-timeCreated: 1511089084
+timeCreated: 1511395060
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -154,7 +154,8 @@ TextureImporter:
         - {x: -40.5, y: 18}
         - {x: -40.5, y: -45}
         - {x: 40.5, y: -45}
-        - {x: 40.5, y: 18}
+        - {x: 21.529877, y: -0.42495346}
+        - {x: 21.595947, y: 10.760139}
         - {x: 20.5, y: 45}
         - {x: -20.5, y: 45}
       physicsShape: []
