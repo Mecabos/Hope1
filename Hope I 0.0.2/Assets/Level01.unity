@@ -711,7 +711,7 @@ MonoBehaviour:
   playerGravity: -20
   accelerationTimeAirborne: 0.2
   accelerationTimeGrounded: 0.1
-  fireRate: 0.1
+  fireRate: 0.7
   shot: {fileID: 1402008710976874, guid: 69522eedffc12d0488a151fd80a238ad, type: 2}
   shotSpawnTransform: {fileID: 18979803}
 --- !u!114 &573235275
