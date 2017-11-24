@@ -13,7 +13,7 @@ public class cameraScript : MonoBehaviour {
     void FixedUpdate()
     {
         Vector3 desiredPosition = target.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp((new Vector3 (transform.position.x, transform.position.y, transform.position.z)), (new Vector3(Mathf.Clamp(desiredPosition.x, -17.0F, 30.0F), Mathf.Clamp(desiredPosition.y, 0.3F, 1.3F), transform.position.z)), smoothSpeed);
+        Vector3 smoothedPosition = Vector3.Lerp((new Vector3 (transform.position.x, transform.position.y, transform.position.z)), (new Vector3(Mathf.Clamp(desiredPosition.x, -5.0F, 35.0F), Mathf.Clamp(desiredPosition.y, -2.3F, 1.0F), transform.position.z)), smoothSpeed);
         transform.position = smoothedPosition;
 
         //transform.LookAt(target);
